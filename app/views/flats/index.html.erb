@@ -1,0 +1,14 @@
+<h1>All Flats</h1>
+
+<% @flats.each do |flat|%>
+<h2><%= flat.name %></h2>
+<%= flat.address %>
+<%= link_to "More info", flat_path(flat) %>
+<%= link_to "Edit", edit_flat_path(flat) %>
+<%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?"} %>
+<% end %>
+
+
+
+
+
